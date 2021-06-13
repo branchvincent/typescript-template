@@ -1,0 +1,5 @@
+// -*- mode: jsonc -*-
+{
+  // See more at https://go.microsoft.com/fwlink/?LinkId=827846
+  "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+}
