@@ -12,15 +12,23 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
       - uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip
       - name: Install dependencies
         run: python3 -m pip install 'copier>=6.0.0a6'
       - name: Run test
         run: |
-          copier -f . tmp/
-          cd tmp/
-          npm install
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global init.defaultBranch rendered
+          git init build/
+          copier -f -d docker=True . build/ && cd build/
+          yarn lint --no-fix
+      - name: Push rendered project
+        run: |
+          cd build/
+          git config --local http.https://github.com/.extraheader "$(git -C .. config --get http.https://github.com/.extraheader)"
+          git push -fu $(git -C .. config --get remote.origin.url) rendered

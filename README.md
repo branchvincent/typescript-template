@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/branchvincent/typescript-template/workflows/CI/badge.svg)](https://github.com/branchvincent/typescript-template/actions/workflows/ci.yaml)
 
-A [Copier](https://github.com/copier-org/copier) template for a Typescript package based on my favorite tools.
+A [Copier](https://github.com/copier-org/copier) template for a Typescript package based on my favorite tools. See the [rendered version](https://github.com/branchvincent/typescript-template/tree/rendered).
 
 ## Usage
 
@@ -14,7 +14,7 @@ copier gh:branchvincent/typescript-template <dest>
 
 ## Features
 
-- Package manager: [NPM](https://docs.npmjs.com/cli)
+- Package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/)
 - Formatting: [Prettier](https://prettier.io/)
 - Testing: [Jest](https://jestjs.io/)
 - Linting: [eslint](https://eslint.org/) and [pre-commit](https://pre-commit.com/)

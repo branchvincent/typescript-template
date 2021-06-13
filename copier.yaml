@@ -46,8 +46,8 @@ _envops:
   variable_end_string: "}}"
 _tasks:
   # Initialize pdm and git
-  - git log &>/dev/null || npm install
-  - git log &>/dev/null || git init
-  - git log &>/dev/null || git add --all
-  - git log &>/dev/null || git commit -qm 'initial commit'
-  - git log &>/dev/null || echo gh repo create -y {{repo_username}}/{{repo_name}} {% if private %}--private{% else %}--public{% endif %}
+  - git log 2>&1 > /dev/null || yarn install
+  - git log 2>&1 > /dev/null || git init
+  - git log 2>&1 > /dev/null || git add --all
+  - git log 2>&1 > /dev/null || git commit -qm 'initial commit'
+  - printf "To create your repo:\n\tgh repo create -y {{repo_username}}/{{repo_name}} {% if private %}--private{% else %}--public{% endif %}"
