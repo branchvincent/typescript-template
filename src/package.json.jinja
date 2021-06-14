@@ -1,8 +1,9 @@
 {
   "name": "{{project_name | lower | replace(' ', '-') | replace('_', '-')}}",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "{{project_description}}",
   "author": "{{author_name}} <{{author_email}}>",
+  "repository": "github:{{repo_username}}/{{repo_name}}",
   {% if private -%}
   "private": true,
   {% endif -%}
