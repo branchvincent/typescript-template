@@ -33,19 +33,9 @@ docker:
 _subdirectory: src
 _skip_if_exists:
   - package.json
-_min_copier_version: 6.0.0a6
-# TODO: remove below with a7+
-_templates_suffix: .jinja
-_envops:
-  block_start_string: "{%"
-  block_end_string: "%}"
-  comment_start_string: "{#"
-  comment_end_string: "#}"
-  keep_trailing_newline: true
-  variable_start_string: "{{"
-  variable_end_string: "}}"
+_min_copier_version: 6.0.0a7
 _tasks:
-  # Initialize pdm and git
+  # Initialize yarn and git
   - "[ -d .git ] || yarn install"
   - "[ -d .git ] || git init && git add --all && git commit -qm 'initial commit'"
   - printf "To create your repo:\n\tgh repo create -y {{repo_username}}/{{repo_name}} {% if private %}--private{% else %}--public{% endif %}"

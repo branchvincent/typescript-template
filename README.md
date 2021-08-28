@@ -6,7 +6,7 @@ A [Copier](https://github.com/copier-org/copier) template for a Typescript packa
 
 ## Usage
 
-> **Requires**: copier>=6.0.0a6
+> **Requires**: copier>=6.0.0a7
 
 ```sh
 copier gh:branchvincent/typescript-template <dest>
