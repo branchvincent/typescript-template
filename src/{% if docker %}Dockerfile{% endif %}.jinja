@@ -6,9 +6,9 @@ FROM base AS builder
 
 # Install deps
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile --prod
-RUN cp -R node_modules /tmp/node_modules
-RUN yarn install --frozen-lockfile
+RUN yarn install --frozen-lockfile --prod \
+    && cp -R node_modules /tmp/node_modules \
+    && yarn install --frozen-lockfile
 
 # Add source
 COPY . .
