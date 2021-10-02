@@ -22,6 +22,7 @@
   "devDependencies": {
     "@tsconfig/recommended": "*",
     "@types/node": "*",
+    "@types/jest": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
@@ -31,8 +32,13 @@
     "eslint-plugin-prettier": "*",
     "eslint-plugin-simple-import-sort": "*",
     "prettier": "*",
+    "ts-jest": "*",
     "typescript": "*"
   },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+  }
   "prettier": {
     "proseWrap": "always",
     "semi": false,
