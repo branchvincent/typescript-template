@@ -16,7 +16,9 @@
     "lint": "eslint --cache --fix --ignore-path=.gitignore --format=visualstudio .",
     "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "*"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "*",
     "@types/node": "*",
@@ -30,5 +32,11 @@
     "eslint-plugin-simple-import-sort": "*",
     "prettier": "*",
     "typescript": "*"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "all"
   }
 }
