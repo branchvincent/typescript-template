@@ -1,19 +1,6 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "incremental": true,
-    "target": "esnext",
-    "module": "esnext",
-    "allowJs": false,
-    "declaration": true,
-    "composite": true,
-    "noEmit": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "outDir": "dist"
   }
 }
