@@ -1,0 +1,47 @@
+{
+  "name": "project-name",
+  "version": "0.1.0",
+  "description": "Project name",
+  "author": "Branch Vincent <branchevincent@gmail.com>",
+  "repository": "github:branchvincent/project-name",
+  "private": true,
+  "main": "src/index.ts",
+  "engines": {
+    "node": ">= 14"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --cache --fix --ignore-path=.gitignore --format=visualstudio .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "dotenv": "*"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "*",
+    "@types/node": "*",
+    "@types/jest": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-simple-import-sort": "*",
+    "jest": "*",
+    "prettier": "*",
+    "ts-jest": "*",
+    "typescript": "*"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "all"
+  }
+}
