@@ -4,23 +4,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Current File",
-      "type": "python",
+      "name": "npm start",
+      "type": "node-terminal",
       "request": "launch",
-      "program": "${file}",
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "justMyCode": false
+      "command": "npm start"
     },
     {
-      "name": "Module",
-      "type": "python",
+      "name": "npm test",
+      "type": "node-terminal",
       "request": "launch",
-      "module": "{{cookiecutter.project_slug}}",
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "justMyCode": false,
-      "args": []
+      "command": "npm test"
     }
   ]
 }
